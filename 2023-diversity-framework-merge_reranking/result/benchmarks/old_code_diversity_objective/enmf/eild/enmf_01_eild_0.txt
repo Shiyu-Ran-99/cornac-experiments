@@ -1,0 +1,229 @@
+rating_threshold = 0.5
+exclude_unknowns = True
+---
+Training data:
+Number of users = 20000
+Number of items = 28307
+Number of ratings = 1189494
+Max rating = 1.0
+Min rating = 0.0
+Global mean = 0.4
+---
+Test data:
+Number of users = 19663
+Number of items = 14641
+Number of ratings = 294910
+Number of unknown users = 0
+Number of unknown items = 0
+---
+Total users = 20000
+Total items = 28307
+build features
+build features
+build features
+build features
+build features
+build features
+build features
+
+[ENMF] Training started!
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+
+[ENMF] Evaluation started!
+
+[ENMF] Re-ranking started!
+data2:  [[256, 0.7, 64, 0.05, 0.1, 160]]
+index2:  ['ENMF']
+output2: Hyper-parameters
+     | batch_size | dropout_p | embedding_size |   lr | neg_weight | num_epochs
+---- + ---------- + --------- + -------------- + ---- + ---------- + ----------
+ENMF |        256 |       0.7 |             64 | 0.05 |        0.1 |        160
+
+data3:  [[10, 50, 0, 'EILD']]
+
+TEST:
+...
+     |    MAE |    MSE |   RMSE |    AUC |  F1@10 | F1@100 |    MAP |    MRR | NCRR@10 | NCRR@100 | NDCG@10 | NDCG@100 | Precision@10 | Precision@100 | Recall@10 | Recall@100 | Activation@10 | Activation@100 | AltVoices_mainstream@10 | AltVoices_mainstream@100 | Calibration_category@10 | Calibration_category@100 | Calibration_complexity@10 | Calibration_complexity@100 | EILD@10 | EILD@100 | Fragmentation@10 | Fragmentation@100 | GiniCoeff@10 | GiniCoeff@100 | ILD@10 | ILD@100 | NDCG_score@10 | NDCG_score@100 | Representation@10 | Representation@100 | Train (s) |   Test (s)
+---- + ------ + ------ + ------ + ------ + ------ + ------ + ------ + ------ + ------- + -------- + ------- + -------- + ------------ + ------------- + --------- + ---------- + ------------- + -------------- + ----------------------- + ------------------------ + ----------------------- + ------------------------ + ------------------------- + -------------------------- + ------- + -------- + ---------------- + ----------------- + ------------ + ------------- + ------ + ------- + ------------- + -------------- + ----------------- + ------------------ + --------- + ----------
+ENMF | 0.3945 | 0.3327 | 0.5254 | 0.8235 | 0.0190 | 0.0202 | 0.0205 | 0.0587 |  0.0194 |   0.0297 |  0.0250 |   0.0767 |       0.0166 |        0.0111 |    0.0370 |     0.2112 |        0.2946 |         0.0916 |                  0.1153 |                   0.1008 |                  0.4670 |                   0.4117 |                    0.3067 |                     0.2391 |  0.7313 |   0.6454 |           0.8442 |            0.6164 |       0.8380 |        0.6941 | 0.7629 |  0.8069 |        0.0665 |         0.1557 |            0.5933 |             0.4591 | 4433.5658 | 16956.5718
+
+Number of Users in Diversity Metric Evaluation
+     | Activation@10 | Activation@100 | AltVoices_mainstream@10 | AltVoices_mainstream@100 | Calibration_category@10 | Calibration_category@100 | Calibration_complexity@10 | Calibration_complexity@100 | EILD@10 | EILD@100 | Fragmentation@10 | Fragmentation@100 | GiniCoeff@10 | GiniCoeff@100 | ILD@10 | ILD@100 | NDCG_score@10 | NDCG_score@100 | Representation@10 | Representation@100 | total_user_number
+---- + ------------- + -------------- + ----------------------- + ------------------------ + ----------------------- + ------------------------ + ------------------------- + -------------------------- + ------- + -------- + ---------------- + ----------------- + ------------ + ------------- + ------ + ------- + ------------- + -------------- + ----------------- + ------------------ + -----------------
+ENMF |         17739 |          17739 |                   17739 |                    17739 |                   17670 |                    17670 |                     17633 |                      17634 |   17739 |    17739 |            17739 |             17739 |        17739 |         17739 |  17739 |   17739 |         17739 |          17739 |             16748 |              17739 |             19663
+
+Hyper-parameters
+     | batch_size | dropout_p | embedding_size |   lr | neg_weight | num_epochs
+---- + ---------- + --------- + -------------- + ---- + ---------- + ----------
+ENMF |        256 |       0.7 |             64 | 0.05 |        0.1 |        160
+
+RE-RANKING:
+...
+     |  F1@10 | NCRR@10 | NDCG@10 | Precision@10 | Recall@10 | Activation@10 | AltVoices_mainstream@10 | Calibration_category@10 | Calibration_complexity@10 | EILD@10 | Fragmentation@10 | GiniCoeff@10 | ILD@10 | NDCG_score@10 | Representation@10 | Re-rank Time (s)
+---- + ------ + ------- + ------- + ------------ + --------- + ------------- + ----------------------- + ----------------------- + ------------------------- + ------- + ---------------- + ------------ + ------ + ------------- + ----------------- + ----------------
+ENMF | 0.0117 |  0.0134 |  0.0155 |       0.0109 |    0.0189 |        0.2982 |                  0.1169 |                  0.5447 |                    0.3560 |  0.7883 |           0.8523 |       0.8094 | 0.8091 |        0.0470 |            0.6102 |       14658.4790
+
+Rerank-parameters
+     | rerank |  k | lambda_constant | diversity_objective
+---- + ------ + -- + --------------- + -------------------
+ENMF |     10 | 50 |               0 |                EILD
+

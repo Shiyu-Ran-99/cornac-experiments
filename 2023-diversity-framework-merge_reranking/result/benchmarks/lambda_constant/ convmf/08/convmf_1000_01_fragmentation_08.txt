@@ -1,0 +1,99 @@
+rating_threshold = 0.5
+exclude_unknowns = True
+---
+Training data:
+Number of users = 20000
+Number of items = 28307
+Number of ratings = 1189494
+Max rating = 1.0
+Min rating = 0.0
+Global mean = 0.4
+---
+Test data:
+Number of users = 19663
+Number of items = 14641
+Number of ratings = 294910
+Number of unknown users = 0
+Number of unknown items = 0
+---
+Total users = 20000
+Total items = 28307
+build features
+build features
+build features
+build features
+build features
+build features
+build features
+
+[ConvMF] Training started!
+Epoch: 1/50
+Loss: 12366271.63062 Elapsed: 376.8119s Converge: 1236627163062458031039386097078560724398281860849558618112.000000 
+Epoch: 2/50
+Loss: 39792685.54146 Elapsed: 379.7069s Converge: 2.217840 
+Epoch: 3/50
+Loss: 34429728.29242 Elapsed: 378.2423s Converge: 0.134772 
+Epoch: 4/50
+Loss: 42009899.39840 Elapsed: 377.8056s Converge: 0.220164 
+Epoch: 5/50
+Loss: 49884792.90117 Elapsed: 377.1884s Converge: 0.187453 
+Epoch: 6/50
+Loss: 56569765.89755 Elapsed: 377.8026s Converge: 0.134008 
+Epoch: 7/50
+Loss: 61102131.85922 Elapsed: 376.8391s Converge: 0.080120 
+Epoch: 8/50
+Loss: 67593877.02624 Elapsed: 377.6306s Converge: 0.106244 
+Epoch: 9/50
+Loss: 70892748.31446 Elapsed: 375.4032s Converge: 0.048804 
+Epoch: 10/50
+Loss: 73474235.09224 Elapsed: 374.8295s Converge: 0.036414 
+Epoch: 11/50
+Loss: 76862106.60046 Elapsed: 376.7674s Converge: 0.046110 
+Epoch: 12/50
+Loss: 76572966.51210 Elapsed: 376.7083s Converge: 0.003762 
+Epoch: 13/50
+Loss: 77949743.07472 Elapsed: 376.6260s Converge: 0.017980 
+Epoch: 14/50
+Loss: 78273069.71213 Elapsed: 377.4639s Converge: 0.004148 
+Epoch: 15/50
+Loss: 78994992.81516 Elapsed: 377.5531s Converge: 0.009223 
+
+[ConvMF] Evaluation started!
+
+[ConvMF] Re-ranking started!
+data2:  [[5, 300, 1000.0, 0.01, 50]]
+index2:  ['ConvMF']
+output2: Hyper-parameters
+       | cnn_epochs |   k | lambda_u | lambda_v | n_epochs
+------ + ---------- + --- + -------- + -------- + --------
+ConvMF |          5 | 300 |   1000.0 |     0.01 |       50
+
+data3:  [[10, 50, 0.8, 'Fragmentation']]
+
+TEST:
+...
+       |    MAE |    MSE |   RMSE |    AUC |  F1@10 | F1@100 |    MAP |    MRR | NCRR@10 | NCRR@100 | NDCG@10 | NDCG@100 | Precision@10 | Precision@100 | Recall@10 | Recall@100 | Activation@10 | Activation@100 | AltVoices_mainstream@10 | AltVoices_mainstream@100 | Calibration_category@10 | Calibration_category@100 | Calibration_complexity@10 | Calibration_complexity@100 | EILD@10 | EILD@100 | Fragmentation@10 | Fragmentation@100 | GiniCoeff@10 | GiniCoeff@100 | ILD@10 | ILD@100 | NDCG_score@10 | NDCG_score@100 | Representation@10 | Representation@100 | Train (s) |  Test (s)
+------ + ------ + ------ + ------ + ------ + ------ + ------ + ------ + ------ + ------- + -------- + ------- + -------- + ------------ + ------------- + --------- + ---------- + ------------- + -------------- + ----------------------- + ------------------------ + ----------------------- + ------------------------ + ------------------------- + -------------------------- + ------- + -------- + ---------------- + ----------------- + ------------ + ------------- + ------ + ------- + ------------- + -------------- + ----------------- + ------------------ + --------- + ---------
+ConvMF | 0.1214 | 0.0540 | 0.1846 | 0.8123 | 0.0174 | 0.0153 | 0.0198 | 0.0623 |  0.0229 |   0.0305 |  0.0259 |   0.0637 |       0.0152 |        0.0084 |    0.0320 |     0.1605 |        0.3224 |         0.1094 |                  0.1501 |                   0.1356 |                  0.6530 |                   0.5377 |                    0.3431 |                     0.2649 |  0.8035 |   0.7262 |           0.3836 |            0.1791 |       0.8210 |        0.6955 | 0.8375 |  0.8276 |        0.0692 |         0.1381 |            0.4938 |             0.4203 | 5669.3406 | 6262.0419
+
+Number of Users in Diversity Metric Evaluation
+       | Activation@10 | Activation@100 | AltVoices_mainstream@10 | AltVoices_mainstream@100 | Calibration_category@10 | Calibration_category@100 | Calibration_complexity@10 | Calibration_complexity@100 | EILD@10 | EILD@100 | Fragmentation@10 | Fragmentation@100 | GiniCoeff@10 | GiniCoeff@100 | ILD@10 | ILD@100 | NDCG_score@10 | NDCG_score@100 | Representation@10 | Representation@100 | total_user_number
+------ + ------------- + -------------- + ----------------------- + ------------------------ + ----------------------- + ------------------------ + ------------------------- + -------------------------- + ------- + -------- + ---------------- + ----------------- + ------------ + ------------- + ------ + ------- + ------------- + -------------- + ----------------- + ------------------ + -----------------
+ConvMF |         17739 |          17739 |                   17739 |                    17739 |                   17670 |                    17670 |                     17634 |                      17634 |   17739 |    17739 |            17739 |             17739 |        17739 |         17739 |  17739 |   17739 |         17739 |          17739 |             17648 |              17739 |             19663
+
+Hyper-parameters
+       | cnn_epochs |   k | lambda_u | lambda_v | n_epochs
+------ + ---------- + --- + -------- + -------- + --------
+ConvMF |          5 | 300 |   1000.0 |     0.01 |       50
+
+RE-RANKING:
+...
+       |  F1@10 | NCRR@10 | NDCG@10 | Precision@10 | Recall@10 | Activation@10 | AltVoices_mainstream@10 | Calibration_category@10 | Calibration_complexity@10 | EILD@10 | Fragmentation@10 | GiniCoeff@10 | ILD@10 | NDCG_score@10 | Representation@10 | Re-rank Time (s)
+------ + ------ + ------- + ------- + ------------ + --------- + ------------- + ----------------------- + ----------------------- + ------------------------- + ------- + ---------------- + ------------ + ------ + ------------- + ----------------- + ----------------
+ConvMF | 0.0168 |  0.0197 |  0.0234 |       0.0148 |    0.0303 |        0.3132 |                  0.1627 |                  0.6508 |                    0.3388 |  0.8110 |           0.2230 |       0.8190 | 0.8428 |        0.0637 |            0.5025 |        2352.1362
+
+Rerank-parameters
+       | rerank |  k | lambda_constant | diversity_objective
+------ + ------ + -- + --------------- + -------------------
+ConvMF |     10 | 50 |             0.8 |       Fragmentation
+
